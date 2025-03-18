@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;   
+}
+.main_box{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("photo.jpg");
+    background-size: cover;
+}
+.btn_one{
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    left: 16px;
+    line-height: 60px;
+}
+.btn_one i{
+    cursor: pointer;
+    transition: all 0.25s linear;
+}
+.btn_one i:hover{
+    transform: scale(1.2);
+}
+.btn_two{
+    color: gray;
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    line-height: 60px;
+    left: 250px;
+}
+.btn_two i{
+    opacity: 0;
+    cursor: pointer;
+    transition: all 0.25s linear;
+}
+.btn_two i:hover{
+    transform: scale(1.2);
+}
+.sidebar_menu{
+    transition: all 0.25s linear;
+    position: fixed;
+    left: -350px;
+    height: 100vh;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.6);
+}
+.sidebar_menu .logo{
+    position: absolute;
+    line-height: 60px;
+    box-shadow: 0px 2px 6px rgba(255, 255, 255, 0.6);
+    width: 100%;
+    height: 60px;
+}
+.sidebar_menu .logo a{
+    position: absolute;
+    left: 65px;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+.sidebar_menu .menu{
+    position: absolute;
+    top: 80px;
+    width: 100%;
+}
+.sidebar_menu .menu ul li{
+    margin-top: 6px;
+    padding: 14px 20px;
+}
+.sidebar_menu .menu ul li:hover{
+    box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.6);
+}
+.sidebar_menu .menu i , a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+.sidebar_menu .menu i{
+    padding-right: 8px;
+}
+.social_media{
+    position: absolute;
+    bottom: 30px;
+    left: 30%;
+}
+.social_media i{
+    color: white;
+    opacity: 0.5;
+    margin: 0 5px;
+    transition: all 0.25s linear;
+}
+#check{
+    display: none;
+}
+.social_media i:hover{
+    opacity: 1;
+    transform: scale(1.3);
+}
+#check:checked ~ .sidebar_menu{
+    left: 0px;
+}
+#check:checked ~ .btn_one i{
+    opacity: 0;
+}
+#check:checked ~ .sidebar_menu .btn_two i{
+    opacity: 1;
+}
+#upper{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: -100;
+    background-color: rgba(255, 255, 255, 0.8);
+    animation: upper 2s linear 0.25s 2 normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#loader{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid;
+    border-top-color: black;
+    border-right-color: rgba(0, 0, 0, 0);
+    border-bottom-color: black;
+    border-left-color: rgba(0, 0, 0, 0);
+    animation: loader 2s linear 0.25s 2 normal;
+}
+@keyframes upper{
+    from{
+        z-index: 1;
+    }
+    to{
+        z-index: 1;
+    }
+}
+@keyframes loader{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+#content{
+    width: 100%;
+    height: 100vh;
+}
+#content header{
+    height: 60px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#content header a{
+    color: black;
+}
+#content header p{
+    width: 30%;
+    height: 100;
+    font-size: 25px;
+    font-weight: bold;
+}
